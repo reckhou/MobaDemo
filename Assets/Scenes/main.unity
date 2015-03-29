@@ -2553,7 +2553,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1875322322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38000011, y: 0, z: -16.0799999}
+  m_LocalPosition: {x: -2, y: 0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1354201727}
@@ -2571,7 +2571,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136654aa26630410daab1bc2bc644a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateSpeed: 0
+  RotateSpeed: 12
+  stat: 0
+  moveDestination: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  destRotation: {x: 0, y: 0, z: 0, w: 0}
+  TestPointList:
+  - {x: -2, y: 0, z: 0}
+  - {x: -2, y: 0, z: -15}
+  CurTestPoint: 0
+  TestCaseEnabled: 0
 --- !u!136 &1875322326
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2598,9 +2607,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!95 &1875322328
 Animator:
@@ -2627,16 +2636,16 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1875322322}
   m_Enabled: 1
-  m_Radius: .572636902
+  m_Radius: .5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 60
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 3.16021824
+  m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -2699,7 +2708,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS LEFT MOUSE BUTTON TO MOVE
+  m_Text: 'PRESS LEFT MOUSE BUTTON TO MOVE
+
+    PRESS T TO SWITCH TEST CASE ON/OFF'
 --- !u!222 &1875492139
 CanvasRenderer:
   m_ObjectHideFlags: 0

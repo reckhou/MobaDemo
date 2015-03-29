@@ -2553,7 +2553,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1875322322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: -15}
+  m_LocalPosition: {x: 1.48000002, y: 0, z: -7.9000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1354201727}
@@ -2572,14 +2572,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSpeed: 12
-  stat: 0
-  moveDestination: {x: 0, y: 0, z: 0}
-  moveVector: {x: 0, y: 0, z: 0}
-  destRotation: {x: 0, y: 0, z: 0, w: 0}
+  Accleration: 10
+  BrakeDistance: .5
   TestPointList:
   - {x: -2, y: 0, z: 0}
   - {x: -2, y: 0, z: -15}
-  CurTestPoint: 0
+  - {x: -7.5, y: 0, z: -8}
+  - {x: 1.5, y: 0, z: -8}
   TestCaseEnabled: 0
 --- !u!136 &1875322326
 CapsuleCollider:
@@ -2641,7 +2640,7 @@ NavMeshAgent:
   m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 360
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

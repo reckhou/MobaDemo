@@ -7,6 +7,9 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		// put character in center of camera
+		Vector3 screenPos = Camera.main.WorldToScreenPoint(Character.transform.position);
+
 		if (Input.GetMouseButtonDown(0)) {
 			Vector3 mousePos = Input.mousePosition;
 			Ray ray = Camera.main.ScreenPointToRay(mousePos);
@@ -18,5 +21,6 @@ public class InputController : MonoBehaviour {
 				Character.GetComponent<CharacterAction>().Move(hitPoint);
 			}
 		}
+
 	}
 }

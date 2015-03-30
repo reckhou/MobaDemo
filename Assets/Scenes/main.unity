@@ -243,6 +243,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -.110415146
       objectReference: {fileID: 0}
+    - target: {fileID: 19559346, guid: 145a6b0f83076401d9b06b826a92d073, type: 2}
+      propertyPath: m_AngularSpeed
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 19559346, guid: 145a6b0f83076401d9b06b826a92d073, type: 2}
+      propertyPath: m_StoppingDistance
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 145a6b0f83076401d9b06b826a92d073, type: 2}
   m_IsPrefabParent: 0
